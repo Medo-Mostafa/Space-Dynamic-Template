@@ -28,11 +28,11 @@ a {
   text-decoration: none;
 }
 
-section, footer {
+section,
+footer {
   position: relative;
   top: 70px;
   padding: 100px 0;
-  overflow: hidden;
 }
 
 .red {
@@ -189,9 +189,7 @@ img {
 
 @media (max-width: 991px) {
   .about .container .image {
-    position: absolute;
-    right: 0;
-    bottom: -310px;
+    display: none;
   }
 }
 
@@ -489,11 +487,6 @@ header .icon.active span:nth-child(3) {
   justify-content: center;
   align-items: center;
   height: 720px;
-}
-@media (max-width: 991px) {
-  .about {
-    margin: 200px 0;
-  }
 }
 .about::before {
   content: "";

@@ -21,10 +21,8 @@
 .about {
   .container {
     .image {
-      @include breakpoints(small) {
-        position: absolute;
-        right: 0;
-        bottom: -310px;
+      @include breakpoints(991px) {
+        display: none;
       }
     }
   }

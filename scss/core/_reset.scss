@@ -23,11 +23,11 @@ ul {
 a {
   text-decoration: none;
 }
-section,footer {
+section,
+footer {
   position: relative;
   top: 70px;
   padding: 100px 0;
-  overflow: hidden;
 }
 .red {
   color: $main-color;

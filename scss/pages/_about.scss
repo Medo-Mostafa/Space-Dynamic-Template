@@ -1,7 +1,4 @@
 .about {
-  @include breakpoints(small) {
-    margin: 200px 0;
-  }
   display: flex;
   justify-content: center;
   align-items: center;

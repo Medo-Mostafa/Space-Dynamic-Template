@@ -1,0 +1,131 @@
+// Start Header Section Design
+header {
+  padding: 20px 15px;
+  background-color: $header-background;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  transform: translateY(-100%);
+  @include transition($short-transition,null);
+  .container {
+    @include flex-box;
+    justify-content: space-between;
+    .logo {
+      p {
+        color: $main-color;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: $medium-heading;
+        span {
+          color: $alt-color;
+        }
+      }
+    }
+    .menu {
+      @include flex-box;
+      @media (max-width: 991px) {
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 68px;
+        background-color: $header-background;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        transition: $short-transition;
+        -webkit-transition: $short-transition;
+        -moz-transition: $short-transition;
+        -ms-transition: $short-transition;
+        -o-transition: $short-transition;
+      }
+      li {
+        margin-right: $large-heading;
+        @media (max-width: 991px) {
+          margin: 0;
+          padding: 15px;
+          @include border($p-color, 0.15, top);
+          width: 100%;
+          text-align: center;
+        }
+        font: {
+          size: 1rem;
+          weight: 500;
+        }
+        a {
+          color: $p-color;
+          letter-spacing: 1.1px;
+          &:hover,
+          &.active {
+            color: $main-color;
+            transition: $short-transition;
+            -webkit-transition: $short-transition;
+            -moz-transition: $short-transition;
+            -ms-transition: $short-transition;
+            -o-transition: $short-transition;
+            -webkit-transition: $short-transition;
+          }
+        }
+      }
+    }
+  }
+  .icon {
+    width: 23px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+    height: 16px;
+    display: none;
+    span {
+      width: 100%;
+      height: 2px;
+      background-color: $p-color;
+      position: absolute;
+      transition: $short-transition;
+      -webkit-transition: $short-transition;
+      -moz-transition: $short-transition;
+      -ms-transition: $short-transition;
+      -o-transition: $short-transition;
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2) {
+        top: 8px;
+      }
+      &:nth-child(3) {
+        top: 16px;
+      }
+    }
+    &.active {
+      + .menu {
+        height: 297px;
+      }
+      span:nth-child(1) {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+      }
+      span:nth-child(1),
+      span:nth-child(3) {
+        top: 8px;
+      }
+    }
+    @media (max-width: 991px) {
+      & {
+        display: flex;
+        z-index: 1;
+      }
+    }
+  }
+}

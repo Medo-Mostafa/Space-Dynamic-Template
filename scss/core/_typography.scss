@@ -1,0 +1,115 @@
+// Landing Typography
+.landing {
+  .container {
+    .text {
+      h3 {
+        text-transform: uppercase;
+        color: $main-color;
+        font-size: $small-heading;
+        font-size: $small-heading;
+      }
+      h1 {
+        font-size: 3rem;
+        @include breakpoints(small) {
+          text-align: center;
+        }
+      }
+      p {
+        font: {
+          weight: 600;
+        }
+        color: $p-color;
+        a {
+          color: $a-color;
+        }
+      }
+    }
+  }
+}
+// About Us Typography
+.about {
+  .container {
+    .box {
+      .text {
+        h2 {
+          @include breakpoints(small) {
+            font-size: 19px;
+          }
+        }
+      }
+    }
+  }
+}
+// Services Section Typography
+.services {
+  .container {
+    .services-content {
+      h2 {
+        font-size: $large-heading;
+      }
+      p {
+        color: $p-color;
+        margin: 40px 0;
+      }
+    }
+  }
+}
+// Portfolio Section Typography
+.portfolio {
+  h2 {
+    text-align: center;
+    font-size: $large-heading;
+    margin-bottom: 100px;
+    line-height: 1.6;
+    color: $p-color;
+  }
+  .container {
+    .box {
+      h4 {
+        font-size: 19px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+// Blog Section Typography
+.blog {
+  .container {
+    .blog-heading {
+      @include flex-box;
+      justify-content: space-between;
+      @include breakpoints(991px) {
+        justify-content: center;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+    }
+    .blog-content {
+      .left {
+        .left-text {
+          h3 {
+            margin-bottom: 20px;
+            color: $p-color;
+          }
+          p {
+            line-height: 1.6;
+          }
+        }
+      }
+      .right {
+        .box {
+          .text {
+            h4 {
+              font: {
+                size: 20px;
+                weight: 900;
+              }
+              color: $p-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

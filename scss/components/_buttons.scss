@@ -1,0 +1,34 @@
+// Global Button
+.button {
+  display: block;
+  padding: 15px 25px;
+  background-color: $alt-color;
+  width: fit-content;
+  color: #fff;
+  @include border-radius(30px);
+  margin-top: 50px;
+  outline: none;
+  border: none;
+}
+// Home Page
+.field {
+  button {
+    transform: translate(0, -50%);
+    top: 50%;
+    right: 13px;
+    border: none;
+    padding: 15px 30px;
+    background-color: #fff;
+    position: absolute;
+    font-weight: 500;
+    cursor: pointer;
+    @include border-radius(50px);
+    @include breakpoints(375px) {
+      padding: 10px 15px;
+      right: 7px;
+    }
+    a {
+      color: $main-color;
+    }
+  }
+}

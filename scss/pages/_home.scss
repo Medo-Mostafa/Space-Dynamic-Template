@@ -1,0 +1,76 @@
+.landing {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  @include breakpoints(991px) {
+    height: 150vh;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+  }
+  &::before {
+    left: 0;
+    width: 225px;
+    height: 470px;
+    background-image: url(../images/baner-dec-left.png);
+  }
+  &::after {
+    width: 98px;
+    height: 290px;
+    right: 0;
+    background-image: url(../images/baner-dec-right.png);
+  }
+  .container {
+    display: flex;
+    @include breakpoints(small) {
+      & {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include breakpoints(small) {
+        text-align: center;
+      }
+      @include transform(translateX(-50%));
+      opacity: 0;
+
+      .field {
+        position: relative;
+        margin: 1.67em 0;
+        width: -webkit-fill-available;
+        width: -moz-available;
+        @include border-radius(60px);
+        input,
+        input::placeholder {
+          color: #fff;
+
+          @include breakpoints(375px) {
+            font-size: 15px;
+          }
+        }
+        input {
+          font-size: $small-heading;
+          border: none;
+          outline: none;
+          padding: 25px;
+          @include border-radius(60px);
+          width: -webkit-fill-available;
+          width: -moz-available;
+          @include breakpoints(375px) {
+            padding: 15px;
+          }
+          background-color: $alt-color;
+        }
+      }
+    }
+  }
+}

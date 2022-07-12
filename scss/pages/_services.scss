@@ -1,0 +1,48 @@
+.services {
+  .container {
+    @include grid-system(420px);
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    @include breakpoints(375px) {
+      margin-top: 100px;
+    }
+
+    .services-content {
+      margin: 0 15px;
+      line-height: 1.6;
+      @include breakpoints(375px) {
+        margin: 0 60px;
+      }
+      .progress-skills {
+        .progress {
+          width: 100%;
+          background-color: #f7eff1;
+          margin: 0;
+          @include border-radius(30px);
+          span {
+            position: relative;
+            width: -webkit-fill-available;
+            width: -moz-available;
+            height: 8px;
+            background-color: $main-color;
+            width: 0%;
+            @include transition($long-transition, null);
+            display: block;
+            margin-top: 10px;
+            @include border-radius(30px);
+            &::after {
+              content: attr(data-progress);
+              position: absolute;
+              right: 0;
+              top: -35px;
+              font-size: 18px;
+              color: $alt-color;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

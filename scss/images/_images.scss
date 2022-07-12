@@ -1,0 +1,98 @@
+// Landing Page Image
+.landing {
+  .container {
+    img {
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      margin-left: 4rem;
+      @include breakpoints(small) {
+        margin: 0;
+      }
+      @include breakpoints(medium) {
+        width: 45vw;
+      }
+      @include transform(scale(0.3));
+      opacity: 0;
+    }
+  }
+}
+// About Us Section Images
+.about {
+  .container {
+    .image {
+      @include breakpoints(small) {
+        position: absolute;
+        right: 0;
+        bottom: -310px;
+      }
+    }
+  }
+}
+// Services Section Image
+.services {
+  .container {
+    .image {
+      opacity: 0;
+      @include transform(translateX(-50%));
+      @include transition($long-transition, null);
+      @include breakpoints(375px) {
+        width: 300px;
+        margin: auto;
+      }
+    }
+  }
+}
+// Portfolio Section Image
+.portfolio {
+  .container {
+    .box {
+      .show {
+        img {
+          width: 120px;
+          padding: 20px;
+          display: flex;
+          margin: auto;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          left: 50%;
+        }
+      }
+    }
+  }
+}
+
+// Blog Section Images
+.blog {
+  .container {
+    .blog-heading {
+      img {
+        @include breakpoints(991px) {
+          display: none;
+        }
+      }
+    }
+    .blog-content {
+      .left {
+        img {
+          @include border-radius(20px);
+          box-shadow: 0 0 7px 0px #e4e1e1;
+        }
+      }
+      .right {
+        .box {
+          @include breakpoints(767px) {
+            img {
+              width: -webkit-fill-available;
+            }
+          }
+          img {
+            object-fit: cover;
+            @include border-radius(20px);
+          }
+        }
+      }
+    }
+  }
+}
